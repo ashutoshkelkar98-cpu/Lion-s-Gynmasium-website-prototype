@@ -5,3 +5,9 @@
 
 /* Black, grey, white and gold brand theme */
 header{background:#111111;color:#ffffff}.brand small{color:inherit}.nav-wrap .menu-toggle{color:#ffffff;border-color:#656565}.nav-cta{color:var(--amber)}.button{color:#171717}.hero .secondary{color:#ffffff}.button.secondary:hover{background:#eeeeee;color:#171717}.hero .button.secondary:hover{background:#ffffff;color:#171717}.note{border-left-color:var(--amber)}@media(max-width:640px){nav{background:#111111;color:#ffffff}}
+
+/* Light tinted sticky header */
+header{position:sticky;top:0;z-index:50;background:rgba(248,248,248,.88);color:#171717;-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,0,0,.08);box-shadow:0 4px 18px rgba(0,0,0,.04)}
+.nav-wrap .menu-toggle{color:#171717;border-color:#bdbdbd}.nav-cta{color:#171717}html{scroll-padding-top:110px}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){header{background:rgba(248,248,248,.97)}}
+@media(max-width:640px){nav{background:rgba(248,248,248,.98);color:#171717}}
