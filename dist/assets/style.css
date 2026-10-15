@@ -11,3 +11,8 @@ header{position:sticky;top:0;z-index:50;background:rgba(248,248,248,.88);color:#
 .nav-wrap .menu-toggle{color:#171717;border-color:#bdbdbd}.nav-cta{color:#171717}html{scroll-padding-top:110px}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){header{background:rgba(248,248,248,.97)}}
 @media(max-width:640px){nav{background:rgba(248,248,248,.98);color:#171717}}
+
+/* White secondary buttons: lift and invert on hover */
+.button.secondary{background:#ffffff;color:#171717;border-color:#bdbdbd;transition:background-color .22s ease,color .22s ease,border-color .22s ease,transform .22s ease,box-shadow .22s ease}
+.button.secondary:hover,.button.secondary:focus-visible,.hero .button.secondary:hover,.hero .button.secondary:focus-visible{background:#111111;color:#ffffff;border-color:#111111;transform:translateY(-3px);box-shadow:0 6px 14px rgba(0,0,0,.14)}
+@media(prefers-reduced-motion:reduce){.button.secondary:hover,.button.secondary:focus-visible{transform:none}}
