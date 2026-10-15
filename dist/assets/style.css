@@ -22,6 +22,3 @@ header{position:sticky;top:0;z-index:50;background:rgba(248,248,248,.88);color:#
 
 /* Recommended plan uses a badge, not a dimmed card */
 .plan:nth-child(2){background:#ffffff;border-top:1px solid #d4d4d4;padding-top:30px}.plan-recommended{position:relative}.plan-badge{align-self:flex-start;background:var(--amber);color:#171717;font-size:11px;font-weight:700;letter-spacing:.3px;padding:6px 12px;margin-bottom:18px}.plan:nth-child(2):hover,.plan:nth-child(2):focus-within,.plan:nth-child(2).is-selected{border-top-color:var(--amber)}@media(max-width:900px){.plan:nth-child(2){padding-top:22px}}
-
-/* Dark panel for the enquiry form */
-#enquiry-form{background:#171717;color:#ffffff;padding:32px;border:1px solid #303030}#enquiry-form label{color:#ffffff}#enquiry-form .muted{color:#c4c4c4}#enquiry-form input,#enquiry-form select,#enquiry-form textarea{background:#ffffff;color:#171717;border-color:#d2d2d2}#enquiry-form #result{background:#292929;color:#ffffff;border-color:#686868}#enquiry-form #result p{color:#dedede}@media(max-width:640px){#enquiry-form{padding:24px 20px}}
