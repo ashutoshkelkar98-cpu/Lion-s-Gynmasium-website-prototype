@@ -24,11 +24,17 @@ header{position:sticky;top:0;z-index:50;background:rgba(248,248,248,.88);color:#
 .plan:nth-child(2){background:#ffffff;border-top:1px solid #d4d4d4;padding-top:30px}.plan-recommended{position:relative}.plan-badge{align-self:flex-start;background:var(--amber);color:#171717;font-size:11px;font-weight:700;letter-spacing:.3px;padding:6px 12px;margin-bottom:18px}.plan:nth-child(2):hover,.plan:nth-child(2):focus-within,.plan:nth-child(2).is-selected{border-top-color:var(--amber)}@media(max-width:900px){.plan:nth-child(2){padding-top:22px}}
 
 /* Homepage contact CTA: draw outline, then fill yellow */
-.nav-cta.talk-animated{position:relative;isolation:isolate;display:inline-block;padding:11px 19px;border:0;background:transparent;color:#171717;transition:color .18s ease .14s,background-color .18s ease .14s}
-.talk-animated::before,.talk-animated::after{content:"";position:absolute;inset:0;pointer-events:none;box-sizing:border-box;border:1px solid var(--amber);transition:clip-path .3s ease}
+.nav-cta.talk-animated{position:relative;isolation:isolate;display:inline-block;padding:11px 19px;border:0;background:transparent;color:#171717;transition:color .22s ease,background-color .22s ease}
+.talk-animated::before,.talk-animated::after{content:"";position:absolute;inset:0;pointer-events:none;box-sizing:border-box;border:1px solid #171717;transition:clip-path .65s ease,border-color .2s ease}
 .talk-animated::before{clip-path:polygon(0 100%,100% 100%,100% 100%,0 100%);border-top:0;border-right:0}
-.talk-animated::after{clip-path:polygon(0 100%,100% 100%,100% 100%,0 100%);border-bottom:0;border-left:0;transition-delay:.08s}
+.talk-animated::after{clip-path:polygon(0 100%,100% 100%,100% 100%,0 100%);border-bottom:0;border-left:0;transition-delay:0s}
 .talk-animated:hover::before,.talk-animated:focus-visible::before,.talk-animated:hover::after,.talk-animated:focus-visible::after{clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
 .nav-cta.talk-animated:hover,.nav-cta.talk-animated:focus-visible{background:#d9a900;color:#ffffff}
 @media(max-width:900px){.nav-cta.talk-animated{display:none}}
 @media(prefers-reduced-motion:reduce){.nav-cta.talk-animated,.talk-animated::before,.talk-animated::after{transition:none}}
+
+/* Let the black outline finish before the yellow state */
+.talk-animated:hover::before,.talk-animated:focus-visible::before,.talk-animated:hover::after,.talk-animated:focus-visible::after{border-color:#d9a900;transition:clip-path .65s ease,border-color .2s ease .8s}
+.talk-animated:hover::after,.talk-animated:focus-visible::after{transition:clip-path .65s ease .15s,border-color .2s ease .8s}
+.nav-cta.talk-animated:hover,.nav-cta.talk-animated:focus-visible{transition:color .22s ease .8s,background-color .22s ease .8s}
+@media(prefers-reduced-motion:reduce){.nav-cta.talk-animated:hover,.nav-cta.talk-animated:focus-visible,.talk-animated:hover::before,.talk-animated:focus-visible::before,.talk-animated:hover::after,.talk-animated:focus-visible::after{transition:none}}
