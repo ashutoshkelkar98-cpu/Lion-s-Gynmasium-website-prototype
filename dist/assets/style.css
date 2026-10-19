@@ -25,7 +25,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(248,248,248,.88);color:#
 
 /* Homepage contact CTA: draw outline, then fill yellow */
 .nav-cta.talk-animated{position:relative;isolation:isolate;display:inline-block;padding:11px 19px;border:0;background:transparent;color:#171717;transition:color .22s ease,background-color .22s ease}
-.talk-animated::before,.talk-animated::after{content:"";position:absolute;inset:0;pointer-events:none;box-sizing:border-box;border:1px solid #171717;transition:clip-path .65s ease,border-color .2s ease}
+.talk-animated::before,.talk-animated::after{content:"";position:absolute;inset:0;pointer-events:none;box-sizing:border-box;border:1px solid #171717;transition:clip-path .55s ease,border-color .2s ease}
 .talk-animated::before{clip-path:polygon(0 100%,100% 100%,100% 100%,0 100%);border-top:0;border-right:0}
 .talk-animated::after{clip-path:polygon(0 100%,100% 100%,100% 100%,0 100%);border-bottom:0;border-left:0;transition-delay:0s}
 .talk-animated:hover::before,.talk-animated:focus-visible::before,.talk-animated:hover::after,.talk-animated:focus-visible::after{clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
@@ -34,7 +34,10 @@ header{position:sticky;top:0;z-index:50;background:rgba(248,248,248,.88);color:#
 @media(prefers-reduced-motion:reduce){.nav-cta.talk-animated,.talk-animated::before,.talk-animated::after{transition:none}}
 
 /* Let the black outline finish before the yellow state */
-.talk-animated:hover::before,.talk-animated:focus-visible::before,.talk-animated:hover::after,.talk-animated:focus-visible::after{border-color:#d9a900;transition:clip-path .65s ease,border-color .2s ease .8s}
-.talk-animated:hover::after,.talk-animated:focus-visible::after{transition:clip-path .65s ease .15s,border-color .2s ease .8s}
-.nav-cta.talk-animated:hover,.nav-cta.talk-animated:focus-visible{transition:color .22s ease .8s,background-color .22s ease .8s}
+.talk-animated:hover::before,.talk-animated:focus-visible::before,.talk-animated:hover::after,.talk-animated:focus-visible::after{border-color:#d9a900;transition:clip-path .55s ease,border-color .2s ease .67s}
+.talk-animated:hover::after,.talk-animated:focus-visible::after{transition:clip-path .55s ease .12s,border-color .2s ease .67s}
+.nav-cta.talk-animated:hover,.nav-cta.talk-animated:focus-visible{transition:color .22s ease .67s,background-color .22s ease .67s}
 @media(prefers-reduced-motion:reduce){.nav-cta.talk-animated:hover,.nav-cta.talk-animated:focus-visible,.talk-animated:hover::before,.talk-animated:focus-visible::before,.talk-animated:hover::after,.talk-animated:focus-visible::after{transition:none}}
+
+/* Fine black edging keeps white CTA lettering crisp on yellow */
+.nav-cta.talk-animated:hover,.nav-cta.talk-animated:focus-visible{-webkit-text-stroke:.35px #111111;paint-order:stroke fill;text-shadow:0 0 .4px #111111}
